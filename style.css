@@ -55,6 +55,8 @@ p {
     text-align: center;
 }
 
+
+/* List */
 ul {
     max-width: 300px;
     margin: 1rem auto;
@@ -67,6 +69,8 @@ ul li {
     margin: 0.5rem 0;
 }
 
+
+/* Table */
 table {
     border-collapse: collapse;
     width: 90%;
@@ -86,4 +90,70 @@ table th {
 }
 table tr{
     background-color: #7B7F8A;
+}
+
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.gallery img {
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Signup form */
+.signup-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #555;
 }
