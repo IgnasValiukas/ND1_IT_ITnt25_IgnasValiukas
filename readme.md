@@ -6,7 +6,7 @@
 ---
 
 ## Nuoroda į projektą
-
+https://github.com/IgnasValiukas/ND1_IT_ITnt25_IgnasValiukas.git
 
 ---
 
