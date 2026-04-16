@@ -1,0 +1,132 @@
+/* BENDRI NUSTATYMAI */
+/* Pagrindiniai body nustatymai */
+body {
+    margin: 0; /* pašalina numatytus naršyklės tarpus */
+    padding: 0; /* pašalina vidinius tarpus */
+    font-family: Arial, sans-serif; /* nustato šriftą visam puslapiui */
+    background-color: var(--secondary-color); /* fonas iš CSS kintamųjų */
+    color: var(--text-color); /* pagrindinė teksto spalva */
+}
+
+/* KONTEINERIAI IR BLOKAI */
+/* Pagrindinis puslapio konteineris */
+.page-container {
+    width: 90%; /* turinys užima 90% ekrano pločio */
+    margin: 20px auto; /* centruoja horizontaliai + tarpas viršuje/apačioje */
+}
+
+/* Viršutinė informacinė sekcija */
+.hero-box {
+    background-color: var(--box-bg); /* fonas iš kintamųjų */
+    padding: 20px; /* vidiniai tarpai */
+    border-radius: 10px; /* suapvalinti kampai */
+    margin-bottom: 20px; /* tarpas nuo kitų sekcijų */
+}
+
+/* GRID IŠDĖSTYMAS */
+/* Grid sistema turinio blokams */
+.content-grid {
+    display: grid; /* įjungia CSS Grid išdėstymą */
+    grid-template-columns: repeat(3, 1fr); /* 3 vienodo pločio stulpeliai */
+    gap: 20px; /* tarpai tarp grid elementų */
+}
+
+/* Kortelės (content blokai) */
+.box {
+    background-color: var(--white-color); /* baltas fonas */
+    padding: 20px; /* vidiniai tarpai */
+    border-radius: 10px; /* suapvalinti kampai */
+    border: 1px solid #ddd; /* šviesus rėmelis */
+}
+
+/* KONTAKTŲ PUSLAPIS */
+/* Kontaktų kortelės antraštė */
+.contact-box h3 {
+    text-align: center; /* tekstas centruojamas */
+    margin-top: 0; /* pašalina viršutinį tarpą */
+    margin-bottom: 20px; /* tarpas apačioje */
+}
+
+/* Kontaktų informacijos tekstas */
+.contact-info p {
+    margin: 12px 0; /* tarpai tarp eilučių */
+    font-size: 16px; /* teksto dydis */
+    line-height: 1.5; /* eilučių aukštis (skaitomumui) */
+}
+
+/* Kontaktų informacijos pavadinimai (Phone, Email ir pan.) */
+.contact-info span {
+    display: inline-block; /* leidžia nustatyti plotį */
+    min-width: 80px; /* vienodas plotis visiems label'ams */
+    font-weight: bold; /* paryškintas tekstas */
+}
+
+/* MYGTUKAI */
+/* Mygtukų konteineris */
+.button-row {
+    display: flex; /* flex išdėstymas */
+    justify-content: center; /* centruoja mygtukus horizontaliai */
+    margin-top: 20px; /* tarpas viršuje */
+}
+
+/* Mygtukų dydžio kontrolė */
+.button-row button {
+    width: auto; /* leidžia mygtukui prisitaikyti prie turinio */
+    flex: 0 0 auto; /* neleidžia išsitempti */
+}
+
+/* FLEX IŠDĖSTYMAS */
+/* Kontaktų sekcijos išdėstymas */
+.contact-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    justify-content: center; /* ⬅️ PRIDĖK ŠITĄ */
+}
+
+/* RESPONSIVE ELEMENTAI */
+/* Lentelės wrapper (jei naudojamas) */
+.table-wrapper {
+    overflow-x: auto; /* leidžia scroll'inti horizontaliai */
+    background-color: var(--white-color); /* fonas */
+    padding: 10px; /* vidinis tarpas */
+    border-radius: 10px; /* suapvalinti kampai */
+}
+
+/* TABLET (<= 992px) */
+@media (max-width: 992px) {
+
+    /* Grid keičiamas į 2 stulpelius */
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Kontaktų blokai dedami vienas po kitu */
+    .contact-flex {
+        flex-direction: column; /* iš eilės į stulpelį */
+        align-items: center; /* centruoja blokų turinį */
+    }
+}
+
+
+/* MOBILE (<= 600px) */
+@media (max-width: 600px) {
+
+    /* Navigacija iš eilės → į stulpelį */
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Grid tampa 1 stulpelio */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mygtukai dedami vienas po kitu */
+    .button-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

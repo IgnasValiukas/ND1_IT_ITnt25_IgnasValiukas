@@ -1,67 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta informacija -->
+    <!-- Nurodo simbolių koduotę, kad tekstas būtų rodomas teisingai -->
     <meta charset="UTF-8">
+
+    <!-- Užtikrina responsive veikimą skirtinguose ekrano dydžiuose -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Puslapio pavadinimas, rodomas naršyklės kortelėje -->
     <title>Ignas Valiukas</title>
 
-    <!-- CSS failai -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/extra.css">
+    <!-- Pagrindinis CSS failas bendram puslapio stiliui -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Bootstrap karkasas -->
+    <!-- CSS failas su kintamaisiais, pvz. spalvomis ir kitomis reikšmėmis -->
+    <link rel="stylesheet" href="css/variables.css">
+
+    <!-- Papildomas CSS failas naujų puslapių išdėstymui ir responsive dizainui -->
+    <link rel="stylesheet" href="css/extra.css">
+
+    <!-- Bootstrap CSS karkasas papildomiems stiliams ir mygtukų klasėms -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigacija -->
+    <!-- Header elementas skirtas viršutinei puslapio daliai -->
     <header>
+
+        <!-- Nav elementas naudojamas navigacijos nuorodoms -->
         <nav>
+
+            <!-- Sąrašas su klase nav-menu naudojamas meniu elementų išdėstymui -->
             <ul class="nav-menu">
+
+                <!-- Meniu punktas su nuoroda į pagrindinį puslapį -->
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Meniu punktas su nuoroda į galerijos puslapį -->
                 <li><a href="gallery.html">Gallery</a></li>
+
+                <!-- Meniu punktas su nuoroda į registracijos puslapį -->
                 <li><a href="signin.html">Sign up</a></li>
+
+                <!-- Meniu punktas su nuoroda į About us puslapį -->
                 <li><a href="aboutus.html">About us</a></li>
+
+                <!-- Meniu punktas su nuoroda į kontaktų puslapį -->
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Kontaktų sekcija -->
+    <!-- Main elementas žymi pagrindinį puslapio turinį -->
     <main class="page-container">
+
+        <!-- Hero sekcija naudojama puslapio antraštei ir trumpam aprašymui -->
         <section class="hero-box">
             <h1>Contact us</h1>
             <p>You can reach us by phone, email, or by filling out the form below.</p>
         </section>
 
+        <!-- Flex sekcija dviem blokams išdėstyti vienoje eilėje arba stulpelyje mažesniuose ekranuose -->
         <section class="contact-flex">
-            <div class="box">
+
+            <!-- Pirmas blokas skirtas kontaktinei informacijai -->
+            <div class="box contact-box">
                 <h3>Contact details</h3>
-                <p><b>Phone:</b> +370 600 12345</p>
-                <p><b>Email:</b> porsche@shop.lt</p>
-                <p><b>Address:</b> Vilnius, Lithuania</p>
-                <button class="btn btn-success" onclick="showContactMessage()">Show message</button>
+
+                <!-- Kontaktinės informacijos grupė -->
+                <div class="contact-info">
+                    <p><span>Phone:</span> +370 600 12345</p>
+                    <p><span>Email:</span> porsche@shop.lt</p>
+                    <p><span>Address:</span> Vilnius, Lithuania</p>
+                </div>
+
+                <!-- Mygtuko eilutė naudojama mygtuko lygiavimui -->
+                <div class="button-row">
+
+                    <!-- Bootstrap mygtukas, kuris paspaudus iškviečia JavaScript funkciją -->
+                    <button class="btn btn-success" onclick="showContactMessage()">Show message</button>
+                </div>
             </div>
 
+            <!-- Antras blokas skirtas greitai kontaktų formai -->
             <div class="box">
                 <h3>Quick contact form</h3>
+
+                <!-- Forma naudoja onsubmit įvykį JavaScript funkcijai iškviesti -->
                 <form onsubmit="submitContactForm(event)">
+
+                    <!-- Vardo įvedimo laukas -->
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
+                    <!-- El. pašto įvedimo laukas su email tipo validacija -->
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" required><br><br>
 
+                    <!-- Žinutės įvedimo laukas didesniam tekstui -->
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
+                    <!-- Formos siuntimo mygtukas -->
                     <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <script src="/js/pages.js"></script>
+    <!-- JavaScript failas su puslapio funkcijomis ir įvykių apdorojimu -->
+    <script src="js/pages.js"></script>
 </body>
 </html>
