@@ -1,0 +1,86 @@
+/* Bendri body nustatymai */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+} 
+
+/* Pagrindinis konteineris */
+.page-container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Viršutinė informacinė sekcija */
+.hero-box {
+    background-color: var(--box-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Grid išdėstymas */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Kortelės */
+.box {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Mygtukų eilutė */
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Kontaktų puslapio flex */
+.contact-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Lentelės responsive */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-flex {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+}

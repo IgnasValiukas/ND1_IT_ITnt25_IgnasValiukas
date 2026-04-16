@@ -1,0 +1,9 @@
+/* Bendri spalvų ir tarpų kintamieji */
+:root {
+    --main-color: #111111;
+    --secondary-color: #f5f5f5;
+    --accent-color: #d4af37;
+    --text-color: #222222;
+    --white-color: #ffffff;
+    --box-bg: #fafafa;
+}
