@@ -82,7 +82,7 @@ body {
     gap: 20px;
     align-items: flex-start;
 
-    justify-content: center; /* ⬅️ PRIDĖK ŠITĄ */
+    justify-content: center; /* centruoja kontaktų blokus horizontaliai */
 }
 
 /* RESPONSIVE ELEMENTAI */
